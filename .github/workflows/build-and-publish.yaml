@@ -24,11 +24,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v4
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
+        uses: docker/setup-buildx-action@v4
+        with:
+          driver-options: image=moby/buildkit:latest
+          
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
