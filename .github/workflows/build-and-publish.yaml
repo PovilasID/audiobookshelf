@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Test upload fix branch 
 
 on:
   push:
